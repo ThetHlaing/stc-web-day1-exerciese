@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>example 1 - Css Selectors</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		ul#main-menu li,form{
+			box-shadow: 0 2px 2px 0 rgba(0,0,0,.14);
+			z-index: 1;
+			position: relative;
+			background: #fff;
+			border-radius: 2px;
+			box-sizing: border-box;
+			padding:10px;
+			list-style: none;
+			margin-bottom: 10px;
+		}
+		ul#main-menu li.active{
+			color:green;
+		}		
+
+		label{
+			display: inline-block;
+			min-width: 100px;
+		}
+
+					
+	</style>
+</head>
+
+<body>
+	<ul id='main-menu'>
+		<li>Home</li>
+		<li class="active">Active Menu</li>
+		<li>White color font</li>
+		<li data-type='hidden-menu'>Please Hide Me</li>
+		<li>
+			<ul>
+				<li>I do not want box-shadow</li>
+				<li>I do not want box-shadow</li>
+			</ul>
+		</li>
+		<li data-type='green-menu'>Please use green color font</li>
+		<li>Please use red color font</li>
+	</ul>
+
+	<form>
+		<input type="checkbox" id="checkbox1" /><label for="checkbox1">Text need to change red on checked </label><br />
+	</form>
+
+	<br/><br/>
+	Ref : <a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank"/>https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048</a>
+
+</body>
+
+</html>

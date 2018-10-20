@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>example 1 - Css Selectors</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.circle {
+			width: 100px;
+			height: 100px;
+			margin: 10px auto;
+			border-radius: 100px;
+		}
+
+		.green-ball {
+			background-color: green;
+			transition: border-radius 1s ease 0s,background-color .5s ease .5s;
+		}
+
+		.four-color {
+			border-top: 9px solid blue;
+			border-right: 9px solid #fe5b5b;
+			border-bottom: 9px solid green;
+			border-left: 9px solid #c32b2b;
+			transition: transform 2s ease-in 0s;
+		}
+
+		.move-around {
+			background-color: rgb(113, 93, 204);
+			transition: transform .5s ease-in-out 0s;
+		}
+		
+	</style>	
+</head>
+
+<body>
+	<div class="circle green-ball"></div>
+
+	<div class="circle four-color"></div>
+
+	<div class="circle move-around"></div>
+</body>
+
+</html>

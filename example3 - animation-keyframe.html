@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>example 1 - Css Selectors</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.circle {
+			width: 100px;
+			height: 100px;
+			margin: 10px auto;
+			border-radius: 100px;
+		}
+
+		.green-ball {
+			background-color: green;
+			animation-name: change-to-square;
+			animation-duration: 1s;
+			animation-timing-function: linear;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+
+		.green-ball:hover{
+			animation-play-state: paused;
+		}
+
+		.four-color {
+			border-top: 9px solid blue;
+			border-right: 9px solid #fe5b5b;
+			border-bottom: 9px solid green;
+			border-left: 9px solid #c32b2b;	
+		}
+
+		.move-around {
+			background-color: rgb(113, 93, 204);
+			transition: transform .5s ease-in-out 0s;
+			animation-name: move-around-animation;
+			animation-duration: 3s;
+			animation-timing-function: linear;
+			animation-delay: 0s;
+			animation-iteration-count: 10;
+			animation-direction: alternate;
+		}
+
+		@keyframes change-to-square {
+			from {
+				border-radius: 50px;
+				background-color: green;
+			}
+
+			to {
+				border-radius: 10px;
+				background-color: blue;
+			}
+		}
+
+		@keyframes move-around-animation{
+			0% {
+				transform: translatX(0px);
+			}
+
+			25%{
+				transform: translateX(400px);
+			}
+
+			50% {
+				transform: translateX(0px);
+			}
+			75% {
+				transform: translateX(-400px);
+			}
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="circle green-ball"></div>
+
+	<div class="circle four-color"></div>
+
+	<div class="circle move-around"></div>
+</body>
+
+</html>
